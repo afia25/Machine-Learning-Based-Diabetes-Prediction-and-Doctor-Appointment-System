@@ -1,0 +1,66 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+doctor
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<body id="bg" style="background-image:url('{% static 'user/items/back10.jpg' %}')";>
+   <br><br>
+
+<img style="height:172px; width:200px;" src="{% static 'user/items/doctor1.jpg' %}"ALIGN="left" />
+<p style="background-color : #CF9FFF;">
+&#8202 &#8202&#8202 &#8202      Dr. Rifat Ahmed<br>
+&#8202 &#8202&#8202 &#8202      MBBS, DMC<br>
+&#8202 &#8202&#8202 &#8202      Available 10 am to 6 pm in United Hospital<br>
+&#8202 &#8202&#8202 &#8202      Email : {{ email }}<br>
+&#8202 &#8202&#8202 &#8202      Contact Number : 01552349908<br>
+&#8202 &#8202&#8202 &#8202      Doctor ID : 301<br>
+&#8202 &#8202&#8202 &#8202      <a href="{% url 'take_appointment' %}"> Take Appointment &#8202 &#8202</a></p>
+
+ <br><br><br><br>
+
+<img style="height:172px; width:200px;" src="{% static 'user/items/doctor2.jpg' %}"ALIGN="left" />
+<p style="background-color : #CF9FFF;">
+&#8202 &#8202&#8202 &#8202      Dr. Rezaul Uddin<br>
+&#8202 &#8202&#8202 &#8202      MBBS, DMC<br>
+&#8202 &#8202&#8202 &#8202      Available 9 am to 3 pm <br>
+&#8202 &#8202&#8202 &#8202      Email : rezaul255@gmail.com<br>
+&#8202 &#8202&#8202 &#8202      Contact Number : 01734984577<br>
+&#8202 &#8202&#8202 &#8202      Doctor ID : 302<br>
+&#8202 &#8202&#8202 &#8202      <a href="{% url 'take_appointment' %}"> Take Appointment &#8202 &#8202</a></p>
+
+
+<br><br><br><br>
+
+<img style="height:172px; width:200px;" src="{% static 'user/items/doctor33.jpg' %}"ALIGN="left" />
+<p style="background-color : #CF9FFF;">
+&#8202 &#8202&#8202 &#8202      Dr. Sadia Sobhan<br>
+&#8202 &#8202&#8202 &#8202      MBBS, DMC<br>
+&#8202 &#8202&#8202 &#8202      Available 11 am to 3 pm <br>
+&#8202 &#8202&#8202 &#8202      Email : sadia122@gmail.com<br>
+&#8202 &#8202&#8202 &#8202      Contact Number : 01945336778<br>
+&#8202 &#8202&#8202 &#8202      Doctor ID : 303<br>
+&#8202 &#8202&#8202 &#8202      <a href="{% url 'take_appointment' %}"> Take Appointment &#8202 &#8202</a></p>
+
+
+<br><br><br><br>
+</body>
+<style>
+    #bg{
+    background-size: 1140px 661px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment:fixed;
+
+    }
+
+</style>
+</html>
+
+
+
+
+{% endblock %}

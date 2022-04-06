@@ -1,0 +1,121 @@
+
+
+{% extends 'user/base.html' %}
+
+{% block title %}
+appointments
+{% endblock %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+<body id="bg" style="background-image:url('{% static 'customer/items/a1.jpg' %}')";>
+<br>
+
+<form method="POST" action="{% url 'appointments' %}">
+    {% csrf_token %}
+
+  <label for="docid">Doctor Id:</label><br>
+  <input type="text" id="docid" name="docid"><br><br>
+
+
+
+
+<input type="submit" value="Submit" name="submit">
+</form><br>
+
+<h3 align="center">Appointments</h3>
+<table>
+<thead>
+<tr>
+<th>Patient ID</th>
+<th>Patient Name</th>
+
+<!--<th>Purchase</th>-->
+<th>Contact Number</th>
+<th>Email</th>
+<th>Message</th>
+
+
+    </tr>
+</thead>
+<tbody>
+   {% for c in take_appointment %}
+   {% if c.doctor_id == a %}
+<tr>
+       <td>{{ c.user_id }}</td>
+       <td>{{ c.full_name }}</td>
+
+
+        <td>{{ c.contact_number }}</td>
+    <td>{{ c.email }}</td>
+    <td>{{ c.message }}
+
+
+</tr>
+
+   {% else %}
+   <tr>
+
+   </tr>
+   {% endif %}
+   {% endfor %}
+</tbody>
+</table>
+
+<br><br><br><br>
+
+</body>
+
+
+<style>
+h3{
+     color:#9932cc;
+     font-size:30px;
+     font-style:italic;
+   }
+
+   #bg{
+    background-size: 1400px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment:fixed;
+
+    }
+
+table{
+      font-family: arial,sans-serif;
+      margin: 0 auto;
+      width: 80%;
+      margin-top: 100px;
+      /*border-collapse: collapse; ise for table e single border er jo*/
+ }
+table tr th{
+     border: 1px solid #ffffff;
+     background-color: #9932cc;
+     color: #ffffff;
+     padding: 16px 22px:
+     border-radius: 5px 5px 0 0 !important;
+ }
+table tr th:first-child{
+    text-align: left;
+ }
+table tr td{
+     border: 1px solid #ffffff;
+     background-color: #CF9FFF;
+     padding: 10px 20px:
+     text-align: center;
+ }
+table tr{
+     opacity: .7;
+ }
+table tr:hover{
+     opacity: 1;
+ }
+
+</style>
+
+
+
+{% endblock %}

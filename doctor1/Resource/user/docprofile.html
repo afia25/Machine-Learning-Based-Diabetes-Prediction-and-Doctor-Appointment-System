@@ -1,0 +1,65 @@
+{% extends 'user/base.html' %}
+
+{% block title %}
+doctor profile
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<body id="bg" style="background-image:url('{% static 'user/items/back10.jpg' %}')";>
+   <br><br>
+{% if doctor.user_id == a %}
+    <img style="height:172px; width:200px;" src="{% static 'user/items/doctor1.jpg' %}"ALIGN="left" />
+    <p style="background-color : #CF9FFF;"><br>
+
+           {{ doctor.name }}<br>
+           Qualification : {{ doctor.qualification }}<br>
+           Institute :{{ doctor.institute }}<br>
+        Available from {{ doctor.start_time }} to {{ doctor.end_time }}<br><br><br>
+
+{% elif doctor.user_id == b %}
+    <img style="height:172px; width:200px;" src="{% static 'user/items/doctor2.jpg' %}"ALIGN="left" />
+    <p style="background-color : #CF9FFF;"><br>
+
+           {{ doctor.name }}<br>
+           Qualification : {{ doctor.qualification }}<br>
+           Institute :{{ doctor.institute }}<br>
+        Available from {{ doctor.start_time }} to {{ doctor.end_time }}<br><br><br>
+
+{% elif doctor.user_id == c %}
+    <img style="height:172px; width:200px;" src="{% static 'user/items/doctor33.jpg' %}"ALIGN="left" />
+    <p style="background-color : #CF9FFF;"><br>
+
+           {{ doctor.name }}<br>
+           Qualification : {{ doctor.qualification }}<br>
+           Institute :{{ doctor.institute }}<br>
+        Available from {{ doctor.start_time }} to {{ doctor.end_time }}<br><br><br>
+
+
+{% else %}
+
+{% endif %}
+
+
+
+
+
+
+</body>
+<style>
+    #bg{
+    background-size: 1140px 661px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment:fixed;
+
+    }
+
+</style>
+</html>
+
+
+
+
+{% endblock %}
