@@ -3,7 +3,7 @@
 {% extends 'user/base.html' %}
 
 {% block title %}
-appointments
+all doctors
 {% endblock %}
 
 {% load crispy_forms_tags %}
@@ -11,67 +11,63 @@ appointments
 {% load static %}
 
 <body id="bg" style="background-image:url('{% static 'customer/items/a1.jpg' %}')";>
-<br>
-
-<form method="POST" action="{% url 'appointments' %}">
-    {% csrf_token %}
-
-  <label for="docid">User Id:</label><br>
-  <input type="text" id="docid" name="docid"><br><br>
 
 
 
-
-<input type="submit" value="Submit" name="submit">
-</form><br>
-
-<h3 align="center">Appointments</h3>
 <table>
 <thead>
 <tr>
-<th>Patient ID</th>
-    <th>Patient's User Name</th>
-<th>Patient Name</th>
+<th>User Name</th>
+    <th>User ID</th>
+<th>Name</th>
 
-<!--<th>Purchase</th>-->
+<th>Address</th>
 <th>Contact Number</th>
 <th>Email</th>
-    <th>Time</th>
-    <th>Date</th>
+    <th>Gender</th>
+    <th>Age</th>
 
 
 
     </tr>
 </thead>
 <tbody>
-   {% for c in take_appointment %}
-   {% if c.doctor_id == a %}
+   {% for c in add_doctor %}
+
 <tr>
-       <td>{{ c.user_id }}</td>
+
     <td>{{ c.user_name }}</td>
-       <td>{{ c.full_name }}</td>
+    <td>{{ c.user_id }}</td>
+       <td>{{ c.name }}</td>
+   <td>{{ c.address }}</td>
 
-
-        <td>{{ c.contact_number }}</td>
+        <td>{{ c.contact }}</td>
     <td>{{ c.email }}</td>
-    <td>{{ c.time }}</td>
-    <td>{{ c.date }}</td>
+    <td>{{ c.gender }}</td>
+    <td>{{ c.age }}</td>
 
 
 
 </tr>
 
-   {% else %}
-   <tr>
 
-   </tr>
-   {% endif %}
    {% endfor %}
 </tbody>
 </table>
 
 <br><br><br>
-<a href="{% url 'diabetes_info' %}"> diabetes_info &#8202 &#8202</a>
+<h3 align="center">Delete Doctor</h3>
+<form method="POST" action="{% url 'all_doctors' %}">
+    {% csrf_token %}
+
+  <label for="docid">Doctor Id:</label><br>
+  <input type="text" id="docid" name="docid"><br><br>
+
+
+
+
+<input type="submit" value="Submit" name="submit">
+</form>
 
 <br><br><br><br>
 

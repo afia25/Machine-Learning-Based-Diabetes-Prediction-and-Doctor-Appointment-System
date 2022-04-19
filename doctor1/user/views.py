@@ -36,15 +36,6 @@ def test(request):
 
 
 
-        #val1 = int(request.GET['n1'])
-        #val2 = float(request.GET['glucose'])
-        #val3 = float(request.GET['bp'])
-        #val4 = float(request.GET['st'])
-        #val5 = float(request.GET['insulin'])
-        #val6 = float(request.GET['bmi'])
-        #val7 = float(request.GET['dpf'])
-        #val8 = float(request.GET['age'])
-
         dict = request.POST
         v1 = dict['n1']
         v2 = dict['glucose']
@@ -64,6 +55,10 @@ def test(request):
         val7 = float(v7)
         val8 = float(v8)
 
+        user = get_user(request)
+        un = user.username
+        info = Diabetes_info(user_name=un,pregnancies=v1,glucose=v2,bp=v3,skin_thickness=v4,insulin=v5,bmi=v6,diabetes_pedigree_function=v7,age=v8)
+        info.save()
         #prediction = model.predict([ [val1 ], [val2], [val3], [val4], [val5], [val6], [val7], [val8] ])
         #prediction = model.predict([ [val1,val2,val3,val4,val5,val6,val7,val8], [val1,val2,val3,val4,val5,val6,val7,val8], [val1,val2,val3,val4,val5,val6,val7,val8], [val1,val2,val3,val4,val5,val6,val7,val8], [val1,val2,val3,val4,val5,val6,val7,val8], [val1,val2,val3,val4,val5,val6,val7,val8], [val1,val2,val3,val4,val5,val6,val7,val8], [val1,val2,val3,val4,val5,val6,val7,val8] ])
         #prediction = model.predict([ [ val1 , val2, val3, val4, val5, val6, val7, val8 ] ])
@@ -84,13 +79,16 @@ def test(request):
 
 
 def doctor(request):
-    user = get_user(request)
-    p=Update_profile_doctor.objects.all()
+    a = '301'
+    b = '302'
+    c = '303'
+    doctora = Update_profile_doctor.objects.get(user_id__exact=a)
+    doctorb = Update_profile_doctor.objects.get(user_id__exact=b)
+    doctorc = Update_profile_doctor.objects.get(user_id__exact=c)
     context = {
-        'name': user.username,
-        'email': user.email,
-
-
+        'doctora': doctora,
+        'doctorb': doctorb,
+        'doctorc': doctorc,
     }
 
     return render(request,'user/doctor.html', context)
@@ -112,6 +110,38 @@ def take_appointment(request):
             'take_appointment_form': take_appointment_form,
         }
         return render(request, 'user/take_appointment.html', context)
+
+
+
+def my_appointment(request):
+    if (request.method == 'POST'):
+        dict = request.POST
+        id = dict['id']
+        c = Take_appointment.objects.get(id__exact=id)
+        c.delete()
+
+        a = '201'
+        # get the obj which has max id. api django
+
+        take_appointment = Take_appointment.objects.all()
+        context = {
+            'take_appointment': take_appointment,
+            'a': a,
+        }
+        return render(request, 'user/my_appointment.html', context)
+
+    else:
+        a = '201'
+        # get the obj which has max id. api django
+
+        take_appointment = Take_appointment.objects.all()
+        context = {
+            'take_appointment': take_appointment,
+            'a': a,
+        }
+        return render(request, 'user/my_appointment.html', context)
+
+
 
 def create_profile_doctor(request):
     if (request.method=="POST"):
@@ -157,8 +187,10 @@ def update_profile_doctor(request):
         profile.qualification = q
         inst = dict['inst']
         profile.institute = inst
-
-
+        e = dict['email']
+        profile.email = e
+        contact = dict['contact']
+        profile.contact = contact
 
 
         profile.save()
@@ -280,8 +312,88 @@ def appointments(request):
     return render(request,'user/appointments.html')
 
 
+
+def diabetes_info(request):
+    if (request.method == 'POST'):
+        dict = request.POST
+        un = dict['un']
+        diabetes_info = Diabetes_info.objects.get(user_name__exact=un)
+        context = {
+            'diabetes_info': diabetes_info,
+
+        }
+        return render(request, 'user/diabetes_info.html', context)
+
+    return render(request,'user/diabetes_info.html')
+
+
+
+def add_doctor(request):
+    if (request.method=="POST"):
+        add_doctor_form = AddDoctorForm(request.POST)
+        if (add_doctor_form.is_valid()):
+            add_doctor_form.save()
+            return redirect('home')
+        else:
+            context = {
+                'add_doctor_form': add_doctor_form,
+            }
+            return render(request, 'user/add_doctor.html', context)
+    else:
+        add_doctor_form = AddDoctorForm()
+        context = {
+            'add_doctor_form': add_doctor_form,
+        }
+        return render(request, 'user/add_doctor.html', context)
+
+
+def all_doctors(request):
+    if (request.method == 'POST'):
+        dict = request.POST
+        a = dict['docid']
+        doctor = Add_doctor.objects.get(user_id__exact=a)
+        doctor.delete()
+        add_doctor = Add_doctor.objects.all()
+        context = {
+            'add_doctor': add_doctor,
+
+        }
+        return render(request, 'user/all_doctor.html', context)
+
+    else:
+        add_doctor = Add_doctor.objects.all()
+        context = {
+            'add_doctor': add_doctor,
+
+        }
+        return render(request, 'user/all_doctor.html', context)
+
+
+
+
+def all_appointments(request):
+    take_appointment = Take_appointment.objects.all()
+
+    context = {
+        'take_appointment': take_appointment,
+
+    }
+    return render(request, 'user/all_appointments.html', context)
+
+
+
+def doctor_home(request):
+    return render(request, 'user/doctor_home.html')
+
+def admin_home(request):
+    return render(request, 'user/admin_home.html')
+
+def patient_home(request):
+    return render(request, 'user/patient_home.html')
+
+
 def shell(request):
-    c = Take_appointment.objects.get(id__exact='3')
+    c = Take_appointment.objects.get(user_id__exact='103')
     #c.doctor_id='302'
     #c.save()
     c.delete()

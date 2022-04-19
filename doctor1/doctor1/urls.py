@@ -32,10 +32,21 @@ urlpatterns = [
     path('update_profile_doctor/',views1.update_profile_doctor,name='update_profile_doctor'),
     path('create_profile_doctor/',views1.create_profile_doctor,name='create_profile_doctor'),
     path('take_appointment/',views1.take_appointment,name='take_appointment'),
+
+    path('my_appointment/',views1.my_appointment,name='my_appointment'),
     path('test/', views1.test, name='test'),
     path('doctor/', views1.doctor, name='doctor'),
     path('docprofile/', views1.docprofile, name='docprofile'),
     path('appointments/', views1.appointments, name='appointments'),
+    path('diabetes_info/', views1.diabetes_info, name='diabetes_info'),
+
+    path('add_doctor/', views1.add_doctor, name='add_doctor'),
+    path('all_doctors/', views1.all_doctors, name='all_doctors'),
+    path('all_appointments/', views1.all_appointments, name='all_appointments'),
+
+    path('doctor_home/', views1.doctor_home, name='doctor_home'),
+    path('admin_home/', views1.admin_home, name='admin_home'),
+    path('patient_home/', views1.patient_home, name='patient_home'),
 
     path('shell/', views1.shell, name='shell'),
 

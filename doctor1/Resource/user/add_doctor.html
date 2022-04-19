@@ -1,7 +1,7 @@
 {% extends 'user/base.html' %}
 
 {% block title %}
-create profile
+add doctor
 {% endblock %}
 
 {% load static %}
@@ -10,21 +10,21 @@ create profile
 {% block content %}
 
 <body id="bg">
-<h3 align="center">Create Profile</h3><br><br>
+<!--<h3 align="center">Add </h3><br><br>
 
 
-<!--<div class="container" style="padding-left:25%; padding-right:25%;">-->
+<div class="container" style="padding-left:25%; padding-right:25%;">-->
     <form method="POST">
         {% csrf_token %}
 
         <fieldset class="form-group">
 
-             {{ createform | crispy }}
+             {{ add_doctor_form | crispy }}
 
         </fieldset>
         <div class="submit">
             <button class="form-group btn btn-outline-info" type="submit" name="create_profile_button">
-               Create Profile
+               Add
 
             </button>
 

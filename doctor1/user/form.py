@@ -19,6 +19,7 @@ class Meta:
     ]
 
 class CreateForm(forms.ModelForm):
+    profile_picture = forms.ImageField(required=False)
 
     class Meta:
         model=Update_profile_doctor
@@ -26,6 +27,7 @@ class CreateForm(forms.ModelForm):
             'user_id',
             'user_name',
             'name',
+            'profile_picture',
             'department',
             'start_time',
             'end_time',
@@ -51,7 +53,26 @@ class TakeAppointmentForm(forms.ModelForm):
             'email',
             'doctor_id',
             'message',
+            'date',
+            'time',
 
 
+
+        ]
+
+
+
+class AddDoctorForm(forms.ModelForm):
+    class Meta:
+        model=Add_doctor
+        fields=[
+            'user_name',
+            'user_id',
+            'name',
+            'address',
+            'contact',
+            'email',
+            'gender',
+            'age',
 
         ]

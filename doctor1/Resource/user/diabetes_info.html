@@ -1,9 +1,7 @@
-
-
 {% extends 'user/base.html' %}
 
 {% block title %}
-appointments
+diabetes_info
 {% endblock %}
 
 {% load crispy_forms_tags %}
@@ -13,65 +11,50 @@ appointments
 <body id="bg" style="background-image:url('{% static 'customer/items/a1.jpg' %}')";>
 <br>
 
-<form method="POST" action="{% url 'appointments' %}">
+<form method="POST" action="{% url 'diabetes_info' %}">
     {% csrf_token %}
 
-  <label for="docid">User Id:</label><br>
-  <input type="text" id="docid" name="docid"><br><br>
-
-
-
+  <label for="un">Enter Patient's User Name:</label><br>
+  <input type="text" id="un" name="un"><br><br>
 
 <input type="submit" value="Submit" name="submit">
 </form><br>
 
-<h3 align="center">Appointments</h3>
+<h3 align="center">Diabetes Information</h3>
 <table>
 <thead>
 <tr>
-<th>Patient ID</th>
-    <th>Patient's User Name</th>
-<th>Patient Name</th>
-
-<!--<th>Purchase</th>-->
-<th>Contact Number</th>
-<th>Email</th>
-    <th>Time</th>
-    <th>Date</th>
-
+<th>Patient's User Name</th>
+<th>Pregnancies</th>
+<th>Glucose</th>
+<th>Blood Pressure</th>
+<th>Skin Thickness</th>
+<th>Insulin</th>
+<th>BMI</th>
+<th>Diabetes Pedigree Function</th>
+<th>Age</th>
 
 
     </tr>
 </thead>
 <tbody>
-   {% for c in take_appointment %}
-   {% if c.doctor_id == a %}
+
 <tr>
-       <td>{{ c.user_id }}</td>
-    <td>{{ c.user_name }}</td>
-       <td>{{ c.full_name }}</td>
-
-
-        <td>{{ c.contact_number }}</td>
-    <td>{{ c.email }}</td>
-    <td>{{ c.time }}</td>
-    <td>{{ c.date }}</td>
-
-
+       <td>{{ diabetes_info.user_name }}</td>
+    <td>{{ diabetes_info.pregnancies }}</td>
+       <td>{{ diabetes_info.glucose }}</td>
+        <td>{{ diabetes_info.bp }}</td>
+    <td>{{ diabetes_info.skin_thickness }}</td>
+    <td>{{ diabetes_info.insulin }}</td>
+    <td>{{ diabetes_info.bmi }}</td>
+    <td>{{ diabetes_info.diabetes_pedigree_function }}</td>
+    <td>{{ diabetes_info.age }}</td>
 
 </tr>
 
-   {% else %}
-   <tr>
 
-   </tr>
-   {% endif %}
-   {% endfor %}
 </tbody>
 </table>
-
-<br><br><br>
-<a href="{% url 'diabetes_info' %}"> diabetes_info &#8202 &#8202</a>
 
 <br><br><br><br>
 
@@ -124,7 +107,5 @@ table tr:hover{
  }
 
 </style>
-
-
 
 {% endblock %}
