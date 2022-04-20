@@ -263,11 +263,20 @@ def home(request):
     user = get_user(request)
     p=Update_profile_doctor.objects.all()
     context = {
-        'name': user.username,
+
         'email': user.email,
 
 
     }
+    name= user.username
+    if (name == 'nova501'):
+        return render(request, 'user/admin_home.html', context)
+
+    if (name == 'eva12'):
+        return render(request, 'user/patient_home.html', context)
+
+    if (name == 'rifat301'):
+        return render(request, 'user/doctor_home.html', context)
     #shows msg in home after login
     #message = 'Welcome to Inventory Management System'
     #messages.success(request, message=message)
