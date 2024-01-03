@@ -1,0 +1,56 @@
+{% extends 'user/base_patient.html' %}
+
+{% block title %}
+take_appointment
+{% endblock %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% csrf_token %}
+{% block content %}
+
+<body id="bg">
+
+
+<!--<div class="container" style="padding-left:25%; padding-right:25%;">-->
+    <form method="POST">
+        {% csrf_token %}
+
+        <fieldset class="form-group">
+
+             {{ take_appointment_form | crispy }}
+
+        </fieldset>
+        <div class="submit">
+            <button class="form-group btn btn-outline-info" type="submit" name="take_appointment_button">
+               Take Appointment
+
+            </button>
+
+        </div>
+
+
+    </form>
+<!--</div>-->
+
+</body>
+<style>
+    #bg{
+    background-size: 1400px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment:fixed;
+
+    }
+
+</style>
+</html>
+
+
+
+
+{% endblock %}
+
+
+
+
