@@ -1,0 +1,101 @@
+{% extends 'user/base_doctor.html' %}
+
+{% block title %}
+update profile
+{% endblock %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+<body id="bg">
+<br>
+<h3 align="center">Update Profile</h3>
+
+
+<br><br><br><br>
+<form method="POST" action="{% url 'update_profile_doctor' %}">
+    {% csrf_token %}
+
+  <label for="uid">User Id:</label><br>
+  <input type="text" id="uid" name="uid"><br>
+    <label for="unm">User Name:</label><br>
+  <input type="text" id="unm" name="unm"><br>
+    <label for="nm">Name:</label><br>
+  <input type="text" id="nm" name="nm"><br>
+    <label for="dep">Department:</label><br>
+  <input type="text" id="dep" name="dep"><br>
+    <label for="st">Start Time:</label><br>
+  <input type="text" id="st" name="st"><br>
+    <label for="et">End Time:</label><br>
+  <input type="text" id="et" name="et"><br>
+    <label for="loc">Location:</label><br>
+  <input type="text" id="loc" name="loc"><br>
+    <label for="hos">Hospital Name:</label><br>
+  <input type="text" id="hos" name="hos"><br>
+    <label for="q">Qualification:</label><br>
+  <input type="text" id="q" name="q"><br>
+    <label for="inst">Institute:</label><br>
+  <input type="text" id="inst" name="inst"><br>
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email"><br>
+  <label for="contact">Contact:</label><br>
+  <input type="text" id="contact" name="contact"><br><br><br>
+
+
+<input type="submit" value="Submit" name="update">
+</form>
+<br><br><br>
+</body>
+
+
+<style>
+h3{
+     color:#028494;
+     font-size:36px;
+     font-style:italic;
+   }
+
+   #bg{
+    background-size: 1400px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment:fixed;
+
+    }
+
+table{
+      font-family: arial,sans-serif;
+      margin: 0 auto;
+      width: 80%;
+      margin-top: 100px;
+      /*border-collapse: collapse; ise for table e single border er jo*/
+ }
+table tr th{
+     border: 1px solid #ffffff;
+     background-color: #17a2b8;
+     color: #ffffff;
+     padding: 16px 22px:
+     border-radius: 5px 5px 0 0 !important;
+ }
+table tr th:first-child{
+    text-align: left;
+ }
+table tr td{
+     border: 1px solid #ffffff;
+     background-color: rgb(82,183,233);
+     padding: 10px 20px:
+     text-align: center;
+ }
+table tr{
+     opacity: .7;
+ }
+table tr:hover{
+     opacity: 1;
+ }
+
+</style>
+
+
+
+{% endblock %}

@@ -1,0 +1,126 @@
+
+
+{% extends 'user/base_admin.html' %}
+
+{% block title %}
+all doctors
+{% endblock %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+<body id="bg" style="background-image:url('{% static 'customer/items/a1.jpg' %}')";>
+
+
+
+<table>
+<thead>
+<tr>
+<th>User Name</th>
+    <th>User ID</th>
+<th>Name</th>
+
+<th>Address</th>
+<th>Contact Number</th>
+<th>Email</th>
+    <th>Gender</th>
+    <th>Age</th>
+
+
+
+    </tr>
+</thead>
+<tbody>
+   {% for c in add_doctor %}
+
+<tr>
+
+    <td>{{ c.user_name }}</td>
+    <td>{{ c.user_id }}</td>
+       <td>{{ c.name }}</td>
+   <td>{{ c.address }}</td>
+
+        <td>{{ c.contact }}</td>
+    <td>{{ c.email }}</td>
+    <td>{{ c.gender }}</td>
+    <td>{{ c.age }}</td>
+
+
+
+</tr>
+
+
+   {% endfor %}
+</tbody>
+</table>
+
+<br><br><br>
+<h3 align="center">Delete Doctor</h3>
+<form method="POST" action="{% url 'all_doctors' %}">
+    {% csrf_token %}
+
+  <label for="docid">Doctor Id:</label><br>
+  <input type="text" id="docid" name="docid"><br><br>
+
+
+
+
+<input type="submit" value="Submit" name="submit">
+</form>
+
+<br><br><br><br>
+
+</body>
+
+
+<style>
+h3{
+     color:#9932cc;
+     font-size:30px;
+     font-style:italic;
+   }
+
+   #bg{
+    background-size: 1400px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment:fixed;
+
+    }
+
+table{
+      font-family: arial,sans-serif;
+      margin: 0 auto;
+      width: 80%;
+      margin-top: 100px;
+      /*border-collapse: collapse; ise for table e single border er jo*/
+ }
+table tr th{
+     border: 1px solid #ffffff;
+     background-color: #9932cc;
+     color: #ffffff;
+     padding: 16px 22px:
+     border-radius: 5px 5px 0 0 !important;
+ }
+table tr th:first-child{
+    text-align: left;
+ }
+table tr td{
+     border: 1px solid #ffffff;
+     background-color: #CF9FFF;
+     padding: 10px 20px:
+     text-align: center;
+ }
+table tr{
+     opacity: .7;
+ }
+table tr:hover{
+     opacity: 1;
+ }
+
+</style>
+
+
+
+{% endblock %}

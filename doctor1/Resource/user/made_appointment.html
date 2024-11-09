@@ -1,0 +1,44 @@
+{% extends 'user/base_patient.html' %}
+
+{% block title %}
+appointment scheduled
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+   <div class="alert alert-info">
+       Your appointment has been scheduled.
+   </div><br><br><br>
+
+
+<a href="{% url 'my_appointment' %}">My Appointments &#8202 &#8202</a>
+
+
+
+
+</body>
+
+
+<style>
+h3{
+     color:#9932cc;
+     font-size:30px;
+     font-style:italic;
+   }
+
+   #bg{
+    background-size: 1400px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment:fixed;
+
+    }
+
+
+
+</style>
+
+
+
+{% endblock %}
