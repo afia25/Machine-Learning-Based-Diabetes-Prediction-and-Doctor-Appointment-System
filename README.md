@@ -41,10 +41,10 @@ Features include user registration, health data input, prediction results, appoi
 <p align="center"><img src="./img/admin/admin_fronpg.png" alt="App Screenshot" style="height:250px; width:auto;"></p>
 
 #### Adding New Doctor Form
-<p align="center"><img src="./img/admin/add_new_doc.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/admin/add_new_doc.png" alt="App Screenshot" style="height:380px; width:auto;"></p>
 
 #### View All Appointments
-<p align="center"><img src="./img/admin/view_all_appointments.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/admin/view_all_appointments.png" alt="App Screenshot" style="height:260px; width:auto;"></p>
 
 #### View All Doctors
 <p align="center"><img src="./img/admin/view_all_doc.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
