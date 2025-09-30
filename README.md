@@ -4,10 +4,10 @@ Features include user registration, health data input, prediction results, appoi
 
 ### Final Result of Project
 #### Login Page
-<p align="center"><img src="./img/all/login.png" alt="App Screenshot" style="height:370px; width:auto;"></p>
+<p align="center"><img src="./img/all/login.png" alt="App Screenshot" style="height:270px; width:auto;"></p>
 
 #### Registration form for new users
-<p align="center"><img src="./img/all/reg.png" alt="App Screenshot" style="height:380px; width:auto;"></p>
+<p align="center"><img src="./img/all/reg.png" alt="App Screenshot" style="height:450px; width:auto;"></p>
 
 ### Patient Page
 <p align="center"><img src="./img/patient/patient_frontpg.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
