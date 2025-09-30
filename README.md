@@ -38,7 +38,7 @@ Features include user registration, health data input, prediction results, appoi
 <p align="center"><img src="./img/doctor/patient_info2.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 
 ### Admin Page
-<p align="center"><img src="./img/admin/admin_fronpg.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/admin/admin_fronpg.png" alt="App Screenshot" style="height:250px; width:auto;"></p>
 
 #### Adding New Doctor Form
 <p align="center"><img src="./img/admin/add_new_doc.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
