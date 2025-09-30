@@ -51,10 +51,10 @@ Features include user registration, health data input, prediction results, appoi
 
 ### Database of this project
 #### Diabetes Dataset Used for Machine Learning Model Training
-<p align="center"><img src="./img/database/diabetes_dataset_used_for_ML_training.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/database/diabetes_dataset_used_for_ML_training.png" alt="App Screenshot" style="height:360px; width:auto;"></p>
 
 #### All User Info Table
-<p align="center"><img src="./img/database/all_user_info.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/database/all_user_info.png" alt="App Screenshot" style="height:250px; width:auto;"></p>
 
 #### Patient Diabetes Status Table
 <p align="center"><img src="./img/database/patient_diabetes_status.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
