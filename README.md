@@ -16,10 +16,10 @@ Features include user registration, health data input, prediction results, appoi
 <p align="center"><img src="./img/patient/find_doc.png" alt="App Screenshot" style="height:440px; width:auto;"></p>
 
 ### Book Doctor's Appointment
-<p align="center"><img src="./img/patient/take_doctors_appointment.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/patient/take_doctors_appointment.png" alt="App Screenshot" style="height:400px; width:auto;"></p>
 
 ### Test Diabetes
-<p align="center"><img src="./img/patient/test_diabetes1.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/patient/test_diabetes1.png" alt="App Screenshot" style="height:325px; width:auto;"></p>
 
 ### Doctor Page
 <p align="center"><img src="./img/doctor/doc_frontpg.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
