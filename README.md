@@ -66,7 +66,7 @@ Features include user registration, health data input, prediction results, appoi
 <p align="center"><img src="./img/database/doc_info.png" alt="App Screenshot" style="height:160px; width:auto;"></p>
 
 #### Appointments Table
-<p align="center"><img src="./img/database/appointment list.png" alt="App Screenshot" style="height:200px; width:auto;"></p>
+<p align="center"><img src="./img/database/appointment list.png" alt="App Screenshot" style="height:220px; width:auto;"></p>
 
 
 
