@@ -57,10 +57,10 @@ Features include user registration, health data input, prediction results, appoi
 <p align="center"><img src="./img/database/all_user_info.png" alt="App Screenshot" style="height:230px; width:auto;"></p>
 
 #### Patient Diabetes Status Table
-<p align="center"><img src="./img/database/patient_diabetes_status.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/database/patient_diabetes_status.png" alt="App Screenshot" style="height:150px; width:auto;"></p>
 
 #### Doctor List Table
-<p align="center"><img src="./img/database/doctor_list.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/database/doctor_list.png" alt="App Screenshot" style="height:150px; width:auto;"></p>
 
 #### Doctor Information Table
 <p align="center"><img src="./img/database/doc_info.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
