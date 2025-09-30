@@ -25,10 +25,10 @@ Features include user registration, health data input, prediction results, appoi
 <p align="center"><img src="./img/doctor/doc_frontpg.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 
 #### Create Profile Form
-<p align="center"><img src="./img/doctor/create_doc_profile.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/doctor/create_doc_profile.png" alt="App Screenshot" style="height:400px; width:auto;"></p>
 
 #### Update Profile Form
-<p align="center"><img src="./img/doctor/update_doc_profile.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
+<p align="center"><img src="./img/doctor/update_doc_profile.png" alt="App Screenshot" style="height:400px; width:auto;"></p>
 
 #### Doctor's Appointments
 <p align="center"><img src="./img/doctor/doc_appointments.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
