@@ -35,9 +35,11 @@ In this page, when the user submits the form, request.method=='POST' is used to 
 <p align="center"><img src="./img/doctor/doc_frontpg.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 
 #### Create Profile Form
+In this form, when the user submits the form, request.method=="POST" checks whether the data is coming from the submitted form. CreateForm takes the input from the user and createform.is_valid() checks whether the given input is valid or not. If the input is valid, the data is saved in the database and the user is redirected to the home page. Otherwise the form is again displayed if there is any error.
 <p align="center"><img src="./img/doctor/create_doc_profile.png" alt="App Screenshot" style="height:610px; width:auto;"></p>
 
 #### Update Profile Form
+In this page, profile update is done using normal input fields, not a Django crispy form. The values entered by the user are received through these input fields and stored in a dictionary called dict=request.POST. The data from this dictionary is used to update the doctor’s info and saved in the database.
 <p align="center"><img src="./img/doctor/update_doc_profile.png" alt="App Screenshot" style="height:600px; width:auto;"></p>
 
 #### Doctor's Appointments
