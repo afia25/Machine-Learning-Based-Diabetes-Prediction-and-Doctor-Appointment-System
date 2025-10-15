@@ -21,15 +21,14 @@ The registration form is built using Django’s form handling system. When the u
 
 ### Find Doctor
 In this page, all the doctor records are fetched from the Add_doctor model and displayed on the webpage. The list of doctors is fetched and shown using render(request, 'user/all_doctor.html', context).
-
 <p align="center"><img src="./img/patient/find_doc.png" alt="App Screenshot" style="height:440px; width:auto;"></p>
 
 ### Book Doctor's Appointment
 In this form, request.method=="POST" checks whether the form is submitted by the user. TakeAppointmentForm takes the user’s input and take_appointment_form.is_valid() checks if the given data is valid or not. If it is valid, the form data is saved and the page made_appointment.html is displayed, otherwise the same form page take_appointment.html is reloaded.
-
 <p align="center"><img src="./img/patient/take_doctors_appointment.png" alt="App Screenshot" style="height:430px; width:auto;"></p>
 
 ### Test Diabetes
+In this page, when the user submits the form, request.method=='POST' is used to check whether the data is coming from the submitted form. The system reads the diabetes dataset using pd.read_csv() and divides the dataset into training and testing parts. Then a LogisticRegression() model is used and trained using the training data from csv file. The user input values are taken from the form, converted into float type, saved into the Diabetes_info table, and then passed to the trained model as test data for prediction. Finally, based on the prediction result (Positive or Negative), the output is displayed on the webpage using render(request, 'user/test.html', {"res": result}).
 <p align="center"><img src="./img/patient/test_diabetes1.png" alt="App Screenshot" style="height:335px; width:auto;"></p>
 
 ### Doctor Page
