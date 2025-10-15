@@ -1,10 +1,9 @@
 ## Machine Learning Based Diabetes Prediction and Doctor Appointment System
-A Machine Learning Based Diabetes Prediction and Doctor Appointment System predicts diabetes risk using patient data and allows users to book doctor appointments. 
-Features include user registration, health data input, prediction results, appointment scheduling, cancelling appointment. These system has three types of users: patient, doctor, and admin. These are the features of this system for each type of users:
+<p style="font-size:12px;"> A Machine Learning Based Diabetes Prediction and Doctor Appointment System predicts diabetes risk using patient data and allows users to book doctor appointments. Features include user registration, health data input, prediction results, appointment scheduling, cancelling appointment. These system has three types of users: patient, doctor, and admin. These are the features of this system for each type of users:
 Patient: View doctor list (find doctor), book doctor's appointment, test diabetes by giving their health data as input.
 Doctor: View appointments, view patient's information.
 Admin: Add new doctor, view appointments of doctors, view information of all doctors.
-Every type of user can do registration, login, logout, create profile, and update profile.
+Every type of user can do registration, login, logout, create profile, and update profile. </p>
 
 Django follows the MVC (Model–View–Controller) pattern. Functionalities of view include displaying webpages, accepting requests from users, rendering webpages, etc. Functionalities of model include storing data in the database, fetching data from the database, deleting data, updating data, etc. The controller accepts the user request from the view. The controller fetches data from the model, and the model gives the requested data to the controller. The controller sends these requested data to the user through the view. The controller renders the requested webpage to the user through the view. In Django, urls.py performs the functionalities of the view of MVC, views.py performs both the functionalities of the view and controller of MVC, and models.py performs the functionalities of the model of MVC. In Django, when a user clicks on a link on a webpage, the system searches for that URL in the urls.py file. In the urls.py file, a function will be present corresponding to that URL. This function will be fully written in a particular views.py file. So, in Django, when a user clicks on a link on a webpage, the system finds that URL in urls.py, goes to its corresponding function (written in views.py), and performs the actions written in that function.
 
@@ -15,7 +14,7 @@ Django follows the MVC (Model–View–Controller) pattern. Functionalities of v
 #### Registration form for new users
 <p align="center"><img src="./img/all/reg.png" alt="App Screenshot" style="height:465px; width:auto;"></p>
 
-The registration form is built using Django’s form handling system. When the user submits the form, request.method=="POST" is used to check whether the data is coming from the submitted form. UserRegistrationForm is used to take input from the user and form.is_valid() checks whether the given input is valid or not. If the input is valid, the user is created and authenticated using new_user=authenticate(username=uname,password=psw). render(request, 'user/register.html', context) is used to load the registration page and display the form.
+The registration form is built using Django’s form handling system. When the user submits the form, request.method=="POST" is used to check whether the data is coming from the submitted form. UserRegistrationForm is used to take input from the user and form.is_valid() checks whether the given input is valid or not. If the input is valid, the user is created and authenticated using new_user = authenticate (username = uname,password=psw). render(request, 'user/register.html', context) is used to load the registration page and display the form.
 
 ### Patient Page
 <p align="center"><img src="./img/patient/patient_frontpg.png" alt="App Screenshot" style="height:285px; width:auto;"></p>
