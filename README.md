@@ -22,8 +22,12 @@ The registration form is built using Django’s form handling system. When the u
 ### Find Doctor
 <p align="center"><img src="./img/patient/find_doc.png" alt="App Screenshot" style="height:440px; width:auto;"></p>
 
+In this page, all the doctor records are fetched from the Add_doctor model and displayed on the webpage. The list of doctors is fetched and shown using render(request, 'user/all_doctor.html', context).
+
 ### Book Doctor's Appointment
 <p align="center"><img src="./img/patient/take_doctors_appointment.png" alt="App Screenshot" style="height:430px; width:auto;"></p>
+
+In this form, request.method=="POST" checks whether the form is submitted by the user. TakeAppointmentForm takes the user’s input and take_appointment_form.is_valid() checks if the given data is valid or not. If it is valid, the form data is saved and the page made_appointment.html is displayed, otherwise the same form page take_appointment.html is reloaded.
 
 ### Test Diabetes
 <p align="center"><img src="./img/patient/test_diabetes1.png" alt="App Screenshot" style="height:335px; width:auto;"></p>
