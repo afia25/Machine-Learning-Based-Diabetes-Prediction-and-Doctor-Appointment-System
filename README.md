@@ -1,5 +1,5 @@
 ## Machine Learning Based Diabetes Prediction and Doctor Appointment System
-<p style="font-size:12px;"> A Machine Learning Based Diabetes Prediction and Doctor Appointment System predicts diabetes risk using patient data and allows users to book doctor appointments. Features include user registration, health data input, prediction results, appointment scheduling, cancelling appointment. These system has three types of users: patient, doctor, and admin. These are the features of this system for each type of users:
+<p style="font-size:6px;"> A Machine Learning Based Diabetes Prediction and Doctor Appointment System predicts diabetes risk using patient data and allows users to book doctor appointments. Features include user registration, health data input, prediction results, appointment scheduling, cancelling appointment. These system has three types of users: patient, doctor, and admin. These are the features of this system for each type of users:
 Patient: View doctor list (find doctor), book doctor's appointment, test diabetes by giving their health data as input.
 Doctor: View appointments, view patient's information.
 Admin: Add new doctor, view appointments of doctors, view information of all doctors.
