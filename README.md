@@ -15,6 +15,8 @@ Django follows the MVC (Model–View–Controller) pattern. Functionalities of v
 #### Registration form for new users
 <p align="center"><img src="./img/all/reg.png" alt="App Screenshot" style="height:465px; width:auto;"></p>
 
+The registration form is built using Django’s form handling system. When the user submits the form, request.method=="POST" is used to check whether the data is coming from the submitted form. UserRegistrationForm is used to take input from the user and form.is_valid() checks whether the given input is valid or not. If the input is valid, the user is created and authenticated using new_user=authenticate(username=uname,password=psw). render(request, 'user/register.html', context) is used to load the registration page and display the form.
+
 ### Patient Page
 <p align="center"><img src="./img/patient/patient_frontpg.png" alt="App Screenshot" style="height:285px; width:auto;"></p>
 
