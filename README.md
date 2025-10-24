@@ -61,6 +61,7 @@ In this page, when request.method=='POST', it means the patient's user name is c
 <p align="center"><img src="./img/admin/view_all_appointments.png" alt="App Screenshot" style="height:260px; width:auto;"></p>
 
 #### View All Doctors
+In this page, all doctors are fetched using Add_doctor.objects.all() from Add_doctor table and displayed on the webpage using render(request, 'user/all_doctor.html', context). If the admin submits doctor's ID (request.method=='POST'), to delete a doctor then, the doctor is found using Add_doctor.objects.get(user_id__exact=a) and then deleted from the Add_doctor table. After that all remaining doctors' list is again fetched from Add_doctor table and displayed on the webpage.
 <p align="center"><img src="./img/admin/view_all_doc.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 
 ### Database of this project
