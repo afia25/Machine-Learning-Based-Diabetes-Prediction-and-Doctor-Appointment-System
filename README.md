@@ -43,9 +43,11 @@ In this page, profile update is done using normal input fields, not a Django cri
 <p align="center"><img src="./img/doctor/update_doc_profile.png" alt="App Screenshot" style="height:600px; width:auto;"></p>
 
 #### Doctor's Appointments
+In this page, when request.method=='POST', it means the doctor has submitted his ID. All the appointments corresponding to that doctor's ID are fetched from Take_appointment table. Finally, render(request, 'user/my_appointment.html', context) is used to display the list of appointments on the webpage.
 <p align="center"><img src="./img/doctor/doc_appointments.png" alt="App Screenshot" style="height:350px; width:auto;"></p>
 
 #### Patient's Info
+In this page, when request.method=='POST', it means the patient's user name is coming from a submitted form. The username is taken from the form using dictionary and the corresponding data to that patient's user name, is fetched from the Diabetes_info table. Then render(request,'user/diabetes_info.html',context) is used to display that data on the webpage.
 <p align="center"><img src="./img/doctor/patient_info1.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 <p align="center"><img src="./img/doctor/patient_info2.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 
