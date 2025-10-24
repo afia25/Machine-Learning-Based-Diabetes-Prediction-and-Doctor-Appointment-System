@@ -20,11 +20,11 @@ The registration form is built using Django’s form handling system. When the u
 <p align="center"><img src="./img/patient/patient_frontpg.png" alt="App Screenshot" style="height:285px; width:auto;"></p>
 
 ### Find Doctor
-In this page, all the doctor records are fetched from the Add_doctor model and displayed on the webpage. The list of doctors is fetched and shown using render(request, 'user/all_doctor.html', context).
+In this page, all the doctor records are fetched from the Add_doctor model and displayed on the webpage. The list of doctors is fetched and shown using render(request, 'user/ all_doctor.html', context).
 <p align="center"><img src="./img/patient/find_doc.png" alt="App Screenshot" style="height:440px; width:auto;"></p>
 
 ### Book Doctor's Appointment
-In this form, request.method=="POST" checks whether the form is submitted by the user. TakeAppointmentForm takes the user’s input and take_appointment_form.is_valid() checks if the given data is valid or not. If it is valid, the form data is saved and the page made_appointment.html is displayed, otherwise the same form page take_appointment.html is reloaded.
+In this form, request.method=="POST" checks whether the form is submitted by the user. TakeAppointmentForm takes the user’s input and take_ appointment_ form .is_ valid() checks if the given data is valid or not. If it is valid, the form data is saved and the page made_appointment.html is displayed, otherwise the same form page take_appointment.html is reloaded.
 <p align="center"><img src="./img/patient/take_doctors_appointment.png" alt="App Screenshot" style="height:430px; width:auto;"></p>
 
 ### Test Diabetes
@@ -43,11 +43,11 @@ In this page, profile update is done using normal input fields, not a Django cri
 <p align="center"><img src="./img/doctor/update_doc_profile.png" alt="App Screenshot" style="height:600px; width:auto;"></p>
 
 #### Doctor's Appointments
-In this page, when request.method=='POST', it means the doctor has submitted his ID. All the appointments corresponding to that doctor's ID are fetched from Take_appointment table. Finally, render(request, 'user/my_appointment.html', context) is used to display the list of appointments on the webpage.
+In this page, when request.method=='POST', it means the doctor has submitted his ID. All the appointments corresponding to that doctor's ID are fetched from Take_appointment table. Finally, render(request, 'user/ my_appointment.html', context) is used to display the list of appointments on the webpage.
 <p align="center"><img src="./img/doctor/doc_appointments.png" alt="App Screenshot" style="height:350px; width:auto;"></p>
 
 #### Patient's Info
-In this page, when request.method=='POST', it means the patient's user name is coming from a submitted form. The username is taken from the form using dictionary and the corresponding data to that patient's user name, is fetched from the Diabetes_info table. Then render(request,'user/diabetes_info.html',context) is used to display that data on the webpage.
+In this page, when request.method=='POST', it means the patient's user name is coming from a submitted form. The username is taken from the form using dictionary and the corresponding data to that patient's user name, is fetched from the Diabetes_info table. Then render(request,'user/ diabetes_info.html',context) is used to display that data on the webpage.
 <p align="center"><img src="./img/doctor/patient_info1.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 <p align="center"><img src="./img/doctor/patient_info2.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 
@@ -55,14 +55,14 @@ In this page, when request.method=='POST', it means the patient's user name is c
 <p align="center"><img src="./img/admin/admin_fronpg.png" alt="App Screenshot" style="height:250px; width:auto;"></p>
 
 #### Adding New Doctor Form
-This form is built to add a new doctor to the system. When request.method=="POST", it takes input from AddDoctorForm and checks if it is valid using add_ doctor _form .is _valid (). Then saves the doctor info into Add_doctor table and redirects to home page. If there is something ivalid while submitting the form, render(request, 'user/add_doctor.html', context) is used to load the add doctor page and show the form again.
+This form is built to add a new doctor to the system. When request.method=="POST", it takes input from AddDoctorForm and checks if it is valid using add_ doctor _form .is _valid (). Then saves the doctor info into Add_doctor table and redirects to home page. If there is something ivalid while submitting the form, render(request, 'user/ add_doctor.html', context) is used to load the add doctor page and show the form again.
 <p align="center"><img src="./img/admin/add_new_doc.png" alt="App Screenshot" style="height:380px; width:auto;"></p>
 
 #### View All Appointments
 <p align="center"><img src="./img/admin/view_all_appointments.png" alt="App Screenshot" style="height:260px; width:auto;"></p>
 
 #### View All Doctors
-In this page, all doctors are fetched using Add_doctor.objects.all() from Add_doctor table and displayed on the webpage using render(request, 'user/all_doctor.html', context). If the admin submits doctor's ID (request.method=='POST'), to delete a doctor then, the doctor is found using Add_doctor.objects.get(user_id__exact=a) and then deleted from the Add_doctor table. After that all remaining doctors' list is again fetched from Add_doctor table and displayed on the webpage.
+In this page, all doctors are fetched using Add_doctor.objects.all() from Add_doctor table and displayed on the webpage using render(request, 'user/ all_doctor.html', context). If the admin submits doctor's ID (request.method=='POST'), to delete a doctor then, the doctor is found using Add_doctor.objects.get(user_id__exact=a) and then deleted from the Add_doctor table. After that all remaining doctors' list is again fetched from Add_doctor table and displayed on the webpage.
 <p align="center"><img src="./img/admin/view_all_doc.png" alt="App Screenshot" style="height:300px; width:auto;"></p>
 
 ### Database of this project
