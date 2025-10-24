@@ -55,7 +55,7 @@ In this page, when request.method=='POST', it means the patient's user name is c
 <p align="center"><img src="./img/admin/admin_fronpg.png" alt="App Screenshot" style="height:250px; width:auto;"></p>
 
 #### Adding New Doctor Form
-This form is built to add a new doctor to the system. When request.method=="POST", it takes input from AddDoctorForm and checks if it is valid using add_doctor_form.is_valid(). Then saves the doctor info into Add_doctor table and redirects to home page. If there is something ivalid while submitting the form, render(request, 'user/add_doctor.html', context) is used to load the add doctor page and show the form again.
+This form is built to add a new doctor to the system. When request.method=="POST", it takes input from AddDoctorForm and checks if it is valid using add_ doctor _form .is _valid (). Then saves the doctor info into Add_doctor table and redirects to home page. If there is something ivalid while submitting the form, render(request, 'user/add_doctor.html', context) is used to load the add doctor page and show the form again.
 <p align="center"><img src="./img/admin/add_new_doc.png" alt="App Screenshot" style="height:380px; width:auto;"></p>
 
 #### View All Appointments
